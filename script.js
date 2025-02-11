@@ -4,11 +4,11 @@ const messages = [
     "Are you positive?",
     "Pookie please...",
     "Just think about it!",
-    "If you say no, I will be really sad...",
-    "I will be very sad...",
-    "I will be very very very sad...",
-    "Ok fine, I will stop asking...",
-    "Just kidding, say yes please!❤️"
+    "If you say no, I'll be sad...",
+    "I'll be very sad...",
+    "I'll be very very sad...",
+    "Okay, I'll stop asking...",
+    "Just kidding, PLEASE SAY YES! ❤️"
 ];
 
 let messageIndex = 0;
@@ -24,8 +24,15 @@ function handleNoClick() {
 
 function handleYesClick() {
     const audio = document.getElementById('valentineMusic');
-    audio.currentTime = 145; // Set playback time to 2:25 (145 seconds)
+    audio.currentTime = 145; // Set playback time to 2:25
+    audio.play();
     setTimeout(() => {
         window.location.href = "yes_page.html";
-    }, 500); // Wait 500ms to ensure the audio starts playing before redirecting
+    }, 500);
+}
+
+function playMusic() {
+    const audio = document.getElementById('valentineMusic');
+    audio.play();
+    document.getElementById('playButton').style.display = 'none'; // Hide the button after clicking
 }
